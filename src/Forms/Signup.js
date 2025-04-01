@@ -15,7 +15,7 @@ const Signup = () => {
     }
     const handlesubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:5000/reg',data).then((arr)=>{
+        axios.post(`http://${process.env.REACT_APP_API_URL}/reg`,data).then((arr)=>{
             alert(arr.data);
            return nav('/login')
         }).catch((err)=>{
