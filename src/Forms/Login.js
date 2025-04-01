@@ -15,7 +15,7 @@ const Login = () => {
     }
     const handlesubmit=(e)=>{
         e.preventDefault()
-        axios.post('http://localhost:5000/login',data).then((arr)=>{
+        axios.post(`http://${process.env.REACT_APP_API_URL}:5000/login`,data).then((arr)=>{
             settoken(arr.data.token);
         }).catch((err)=>{
             alert(err.response.data);
