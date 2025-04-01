@@ -11,7 +11,7 @@ const Myprofile = () => {
     const { theme, toggleTheme,isDark}=useTheme()
     
     useEffect(()=>{
-        axios.get(`${process.env.REACT_APP_API_URL}/user,{
+        axios.get(`http://${process.env.REACT_APP_API_URL}/user`,{
             headers:{
                 'x-token':token
             }
